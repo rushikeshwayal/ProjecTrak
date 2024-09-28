@@ -15,7 +15,7 @@ function MinistryLogos() {
                 <img 
                     src={TantradharaaLoogo} 
                     alt='Coal Ministry Logo' 
-                    className='max-h-16 md:max-h-20 lg:max-h-16 w-auto' 
+                    className='max-h-16 md:max-h-20 lg:max-h-14 w-auto' 
                 />
                 <h1 className='text-center font-semibold'>Streamlining Technology with Purposeful Precision</h1>
             </div>

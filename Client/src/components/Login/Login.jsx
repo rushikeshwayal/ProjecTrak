@@ -29,7 +29,7 @@ const navigate = useNavigate();
 
   return (
     <div>
-      <div className='min-h-screen'>
+      <div className=''>
         <MinistryLogos />
         <div className="flex flex-wrap justify-center items-center h-[780px] bg-gray-100">
           <div className="flex bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-[70%]">
