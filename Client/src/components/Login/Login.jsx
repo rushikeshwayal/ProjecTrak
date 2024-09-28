@@ -14,6 +14,11 @@ const navigate = useNavigate();
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!email || !password || !role) {
+      alert('Please fill in all fields');
+      return;
+      
+    }
     // Logic to handle the form submission, e.g., API call
     console.log("Email:", email);
     console.log("Password:", password);
@@ -68,6 +73,7 @@ const navigate = useNavigate();
                 <div className='w-full flex justify-center items-center mt-6 gap-5'>
                   <button 
                     type="button" 
+                    required
                     onClick={() => setRole('Project Investigator')} 
                     className={`text-purple-500 font-bold border-2 border-purple-500 py-2 px-6 rounded-lg transition duration-300 transform ${role === 'Project Investigator' ? 'bg-purple-500 text-white' : 'hover:bg-purple-500 hover:text-white'}`}
                   >
@@ -75,6 +81,7 @@ const navigate = useNavigate();
                   </button>
                   <button 
                     type="button" 
+                    required
                     onClick={() => setRole('Admin Console')} 
                     className={`text-purple-500 font-bold border-2 border-purple-500 py-2 px-6 rounded-lg transition duration-300 transform ${role === 'Admin Console' ? 'bg-purple-500 text-white' : 'hover:bg-purple-500 hover:text-white'}`}
                   >
