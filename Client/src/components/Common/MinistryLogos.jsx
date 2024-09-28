@@ -11,13 +11,13 @@ function MinistryLogos() {
                     className='max-h-16 md:max-h-20 lg:max-h-24 w-auto' 
                 />
             </div>
-              <div className='flex flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/6'>
+              <div className='flex flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/4'>
                 <img 
                     src={TantradharaaLoogo} 
                     alt='Coal Ministry Logo' 
-                    className='max-h-16 md:max-h-20 lg:max-h-24 w-auto' 
+                    className='max-h-16 md:max-h-20 lg:max-h-16 w-auto' 
                 />
-                <h1>Make Track Easier</h1>
+                <h1 className='text-center font-semibold'>Streamlining Technology with Purposeful Precision</h1>
             </div>
             <div className='flex items-center justify-center w-1/2 md:w-1/4 lg:w-1/6'>
                 <img 
