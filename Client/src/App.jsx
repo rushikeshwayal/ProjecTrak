@@ -7,6 +7,11 @@ import UserContext from './components/context/UserContext'; // Import UserContex
 import ProjectDetails from './components/Investigator/Home/ProjectDetails';
 import OrganizationDetails from './components/Investigator/Home/OrganizationDetails';
 import ProjectStatistics from './components/Investigator/Home/ProjectStatistics';
+import InvestigatorManagement from './components/Investigator/Home/InvestigatorManagement';
+import ConnectToAdmin from './components/Investigator/Home/ConnectToAdmin';
+import InvestigatorProfile from './components/Investigator/SubPart/InvestigatorProfile';
+import InvestigatorNotification from './components/Investigator/SubPart/InvestigatorNotification';
+import InvestgatorAuditReport from './components/Investigator/Home/InvestgatorAuditReport';
 
 function App() {
   // Make sure UserContext is properly set up to provide the user
@@ -25,6 +30,12 @@ function App() {
             <Route path="/rd/details" element={<ProjectDetails />} />
             <Route path="/organization" element={<OrganizationDetails />} />
             <Route path="/project/statistics" element={<ProjectStatistics />} />
+            <Route path="/investigator/management" element={<InvestigatorManagement />} />
+            <Route path="/connect/admin" element={<ConnectToAdmin />} />
+            <Route path="/connect/admin" element={<ConnectToAdmin />} />
+            <Route path="/investigator/profile" element={<InvestigatorProfile />} />
+            <Route path="/investigator/notification" element={<InvestigatorNotification />} />
+            <Route path="/investigator/audit/reports" element={<InvestgatorAuditReport />} />
             </>
           )}
         </Routes>
