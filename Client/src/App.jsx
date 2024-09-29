@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useContext } from 'react';
 import Login from './components/Login/Login';
-import Home from './components/Admin/Home/HomeAdmin';
+import HomeAdmin from './components/Admin/Home/HomeAdmin';
 import Home2 from './components/Investigator/Home/HomeInvestigator';
 import UserContext from './components/context/UserContext'; // Import UserContext
 import ProjectDetails from './components/Investigator/Home/ProjectDetails';
@@ -11,33 +11,48 @@ import InvestigatorManagement from './components/Investigator/Home/InvestigatorM
 import ConnectToAdmin from './components/Investigator/Home/ConnectToAdmin';
 import InvestigatorProfile from './components/Investigator/SubPart/InvestigatorProfile';
 import InvestigatorNotification from './components/Investigator/SubPart/InvestigatorNotification';
-import InvestgatorAuditReport from './components/Investigator/Home/InvestgatorAuditReport';
-
+import InvestigatorAuditReport from './components/Investigator/Home/InvestgatorAuditReport'; // Fixed spelling
+import Error from './components/Common/Error';
+import ReportPage from './components/Admin/Home/ReportPage'; // Ensure this is correctly imported
+import AdminProjectDetails from './components/Admin/Project/ProjectDetails/ProjectDetails'; // Ensure this is correctly imported
 function App() {
-  // Make sure UserContext is properly set up to provide the user
-  const { user } = useContext(UserContext) || {}; // Default to an empty object if user is undefined
+  // Access UserContext safely
+  const userContext = useContext(UserContext);
+  const user = userContext ? userContext.user : null;
 
   return (
-    <div className="">
+    <div>
       <BrowserRouter>
         <Routes>
+          {/* Default Route for Login */}
           <Route path="/" element={<Login />} />
-          {user && user.role === 'Admin Console' ? ( // Check if user is defined before accessing role
-            <Route path="/home" element={<Home />} />
-          ) : (
-    <>
-            <Route path="/home" element={<Home2 />} />
-            <Route path="/rd/details" element={<ProjectDetails />} />
-            <Route path="/organization" element={<OrganizationDetails />} />
-            <Route path="/project/statistics" element={<ProjectStatistics />} />
-            <Route path="/investigator/management" element={<InvestigatorManagement />} />
-            <Route path="/connect/admin" element={<ConnectToAdmin />} />
-            <Route path="/connect/admin" element={<ConnectToAdmin />} />
-            <Route path="/investigator/profile" element={<InvestigatorProfile />} />
-            <Route path="/investigator/notification" element={<InvestigatorNotification />} />
-            <Route path="/investigator/audit/reports" element={<InvestgatorAuditReport />} />
+
+          {/* Routes for Admin */}
+          {user && user.role === 'Admin Console' && (
+            <>
+              <Route path="/home" element={<HomeAdmin />} />
+              <Route path="/reports/:reportId" element={<ReportPage />} />
+              <Route path="/admin/project/details" element={<AdminProjectDetails />} />
             </>
           )}
+
+          {/* Routes for Project Investigator */}
+          {user && user.role === 'Project Investigator' && (
+            <>
+              <Route path="/home" element={<Home2 />} />
+              <Route path="/rd/details" element={<ProjectDetails />} />
+              <Route path="/organization" element={<OrganizationDetails />} />
+              <Route path="/project/statistics" element={<ProjectStatistics />} />
+              <Route path="/investigator/management" element={<InvestigatorManagement />} />
+              <Route path="/connect/admin" element={<ConnectToAdmin />} />
+              <Route path="/investigator/profile" element={<InvestigatorProfile />} />
+              <Route path="/investigator/audit/reports" element={<InvestigatorAuditReport />} />
+              <Route path="/investigator/notification" element={<InvestigatorNotification />} />
+            </>
+          )}
+
+          {/* Error Page Route */}
+          <Route path="/error" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
