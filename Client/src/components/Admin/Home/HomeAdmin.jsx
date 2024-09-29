@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MinistryLogos from "../../Common/MinistryLogos";
 import SideNavBarAdmin from "./SideNavBarAdmin";
+import NavBar from './NavBar'; // Importing NavBar for profile and notification icons
 import RDProjects from '../Project/R&DProjects'; // Import R&D Projects Component
 import STProjects from '../Project/STProjects';   // Import S&T Projects Component
 
@@ -23,6 +24,9 @@ function HomeAdmin() {
       <div className={`mt-[100px] transition-transform duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <SideNavBarAdmin isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
       </div>
+
+      {/* Profile and Notification NavBar - top-right corner */}
+      <NavBar />
 
       {/* Main content area */}
       <div className={`transition-all duration-300 flex-grow mt-40 p-4 ${isSidebarOpen ? 'ml-80' : 'ml-16'} mt-[120px]`}>

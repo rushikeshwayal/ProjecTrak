@@ -16,6 +16,11 @@ import Error from './components/Common/Error';
 import ReportPage from './components/Admin/Home/ReportPage'; // Ensure this is correctly imported
 import AdminProjectDetails from './components/Admin/Project/ProjectDetails/ProjectDetails'; // Ensure this is correctly imported
 import ConnectWithInvestigator from './components/Admin/Home/ConnectWithInvestigator';
+import DynamicResourceAllocation from './components/Admin/Home/DynamicResourceAllocation'; // Ensure this is correctly imported
+import AIBasedAnalysis from './components/Admin/Home/AIBasedAnalysis';
+import MinistryPolicies from './components/Admin/Home/MinistryPolicies';
+import AdminProfile from './components/Admin/Home/SubPart/AdminProfile';
+import AdminNotification from './components/Admin/Home/SubPart/AdminNotification';
 function App() {
   // Access UserContext safely
   const userContext = useContext(UserContext);
@@ -35,6 +40,12 @@ function App() {
               <Route path="/reports/:reportId" element={<ReportPage />} />
               <Route path="/admin/project/details" element={<AdminProjectDetails />} />
               <Route path="/connect/investigator" element={<ConnectWithInvestigator />} />
+               <Route path="/resource/allocation" element={<DynamicResourceAllocation />} />
+               <Route path="/analysis/ai" element={<AIBasedAnalysis />} />
+               <Route path="/ministry/policy" element={<MinistryPolicies />} />
+               <Route path="/admin/profile" element={<AdminProfile />} />
+               <Route path="/admin/notification" element={<AdminNotification />} />
+
             </>
           )}
 
@@ -50,6 +61,7 @@ function App() {
               <Route path="/investigator/profile" element={<InvestigatorProfile />} />
               <Route path="/investigator/audit/reports" element={<InvestigatorAuditReport />} />
               <Route path="/connect/investigator" element={<InvestigatorNotification />} />
+             
             </>
           )}
 
