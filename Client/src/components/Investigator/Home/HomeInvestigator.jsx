@@ -28,7 +28,7 @@ function Home2() {
         className={`transition-all duration-300 flex-grow mt-40 p-4 ${isSidebarOpen ? 'ml-80' : 'ml-16'} mt-[120px]`} // Adjust margin based on sidebar state and top margin for MinistryLogos
       >
         <HeroInvestigator />
-        <h1 className="text-2xl font-bold">Welcome to ProjecTrak</h1>
+        <h1 className="text-2xl font-bold">Welcome to Pragati.Track</h1>
         {/* Add your main content here */}
         <AssinedProjectInvestigator />
       </div>

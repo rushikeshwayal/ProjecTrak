@@ -30,7 +30,7 @@ function HomeAdmin() {
 
       {/* Main content area */}
       <div className={`transition-all duration-300 flex-grow mt-40 p-4 ${isSidebarOpen ? 'ml-80' : 'ml-16'} mt-[120px]`}>
-        <h1 className="text-2xl font-bold">Welcome to ProjecTrak</h1>
+        <h1 className="text-2xl font-bold">Welcome to Pragati.Track</h1>
         <p className="text-gray-500">Admin Console</p>
         
         {/* Tabbed Interface for R&D and S&T */}

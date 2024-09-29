@@ -12,11 +12,15 @@ function MinistryLogos() {
                 />
             </div>
               <div className='flex flex-col items-center justify-center w-1/2 md:w-1/4 lg:w-1/4'>
-                <img 
+                {/* <img 
                     src={TantradharaaLoogo} 
                     alt='Coal Ministry Logo' 
                     className='max-h-16 md:max-h-20 lg:max-h-14 w-auto' 
-                />
+                /> */}
+                <div className='flex text-4xl font-bold justify-start items-center flex-wrap flex-row'>
+                <h1 className='text-green-500 '>Pragati.</h1>
+                <h1>Track</h1>
+                </div>
                 <h1 className='text-center font-semibold'>Streamlining Technology with Purposeful Precision</h1>
             </div>
             <div className='flex items-center justify-center w-1/2 md:w-1/4 lg:w-1/6'>

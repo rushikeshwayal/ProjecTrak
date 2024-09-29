@@ -110,10 +110,13 @@ const AdminProfile = () => {
           </div>
 
           {/* Centered Button */}
-          <div className="flex justify-center mt-8">
-            <button className="bg-purple-700 text-white py-3 px-6 rounded-md hover:bg-purple-800 transition-all duration-200">
+          <div className="flex justify-center gap-5 mt-8">
+            <button className="bg-purple-700 text-white py-3  px-6 rounded-md hover:bg-purple-800 transition-all duration-200">
               Update Profile
             </button>
+              <a href='/'> <button className="bg-red-500 text-white py-3 px-6 rounded-md hover:bg-red-600 transition-all duration-200">
+              Logout
+            </button></a>
           </div>
         </div>
       </div>

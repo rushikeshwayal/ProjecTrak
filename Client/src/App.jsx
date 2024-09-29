@@ -21,6 +21,7 @@ import AIBasedAnalysis from './components/Admin/Home/AIBasedAnalysis';
 import MinistryPolicies from './components/Admin/Home/MinistryPolicies';
 import AdminProfile from './components/Admin/Home/SubPart/AdminProfile';
 import AdminNotification from './components/Admin/Home/SubPart/AdminNotification';
+import Chatbot from './components/Common/Chatbot'; // Ensure this is correctly imported
 function App() {
   // Access UserContext safely
   const userContext = useContext(UserContext);
@@ -69,6 +70,7 @@ function App() {
           <Route path="/error" element={<Error />} />
         </Routes>
       </BrowserRouter>
+      <Chatbot />
     </div>
   );
 }
