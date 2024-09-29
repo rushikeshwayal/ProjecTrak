@@ -15,6 +15,7 @@ import InvestigatorAuditReport from './components/Investigator/Home/InvestgatorA
 import Error from './components/Common/Error';
 import ReportPage from './components/Admin/Home/ReportPage'; // Ensure this is correctly imported
 import AdminProjectDetails from './components/Admin/Project/ProjectDetails/ProjectDetails'; // Ensure this is correctly imported
+import ConnectWithInvestigator from './components/Admin/Home/ConnectWithInvestigator';
 function App() {
   // Access UserContext safely
   const userContext = useContext(UserContext);
@@ -33,6 +34,7 @@ function App() {
               <Route path="/home" element={<HomeAdmin />} />
               <Route path="/reports/:reportId" element={<ReportPage />} />
               <Route path="/admin/project/details" element={<AdminProjectDetails />} />
+              <Route path="/connect/investigator" element={<ConnectWithInvestigator />} />
             </>
           )}
 
@@ -47,7 +49,7 @@ function App() {
               <Route path="/connect/admin" element={<ConnectToAdmin />} />
               <Route path="/investigator/profile" element={<InvestigatorProfile />} />
               <Route path="/investigator/audit/reports" element={<InvestigatorAuditReport />} />
-              <Route path="/investigator/notification" element={<InvestigatorNotification />} />
+              <Route path="/connect/investigator" element={<InvestigatorNotification />} />
             </>
           )}
 

@@ -21,10 +21,10 @@ export default function SideNavBarAdmin({ isSidebarOpen, setIsSidebarOpen }) {
             </li>
             <li className="group">
               <a
-                href="/investigator/management"
+                href="/Admin/management"
                 className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
               >
-                Investigator Management
+                Admin Management
               </a>
             </li>
             <li className="group">
@@ -32,31 +32,39 @@ export default function SideNavBarAdmin({ isSidebarOpen, setIsSidebarOpen }) {
                 href="/investigator/audit/reports"
                 className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
               >
-                Audit Reports
+                Dynamic Resource Allocation
               </a>
             </li>
               <li className="group">
               <a
-                href="/connect/admin"
+                href="/connect/investigator"
                 className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
               >
-                Connect With Admin
+                Connect With Investigators
               </a>
             </li>
             <li className="group">
               <a
-                href="/project/statistics"
+                href="/admin/project/statistics"
                 className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
               >
                 Project Statistics
               </a>
             </li>
-            <li className="group">
+              <li className="group">
               <a
-                href="/organization"
+                href="/analysis/ai"
                 className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
               >
-                About Organization
+                AI Based Project Analysis
+              </a>
+            </li>
+            <li className="group">
+              <a
+                href="/ministry/policy"
+                className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
+              >
+                About Ministry Policy
               </a>
             </li>
           </ul>
