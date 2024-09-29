@@ -39,9 +39,11 @@ const navigate = useNavigate();
             </div>
 
             {/* Form Section */}
-            <div className="w-full md:w-1/2 p-8">
-              <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">ProjecTrak</h1>
-              
+            <div className="w-full  md:w-1/2 p-8">
+            <div className='flex mb-8  justify-center'>
+              <h1 className="text-3xl font-bold text-[#7ed957]  text-center">Pragati.</h1>
+              <h1 className="text-3xl font-bold text-gray-800  text-center">Track</h1>
+              </div>
               <form className="space-y-6" onSubmit={handleSubmit}>
                 {/* Email Input */}
                 <div>
