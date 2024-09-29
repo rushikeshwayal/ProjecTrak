@@ -61,7 +61,7 @@ function App() {
               <Route path="/connect/admin" element={<ConnectToAdmin />} />
               <Route path="/investigator/profile" element={<InvestigatorProfile />} />
               <Route path="/investigator/audit/reports" element={<InvestigatorAuditReport />} />
-              <Route path="/connect/investigator" element={<InvestigatorNotification />} />
+              <Route path="/investigator/notification" element={<InvestigatorNotification />} />
              
             </>
           )}
