@@ -27,14 +27,14 @@ export default function SideNavBarAdmin({ isSidebarOpen, setIsSidebarOpen }) {
                 Connect With Investigators
               </a>
             </li>
-            {/* <li className="group">
+            <li className="group">
               <a
-                href="/Admin/management"
+                href="/create/project"
                 className="flex items-center px-4 py-2 text-gray-700 rounded-lg transition duration-300 transform hover:bg-purple-500 hover:text-white hover:scale-105 group-hover:shadow-lg"
               >
-                Admin Management
+                Create New Project
               </a>
-            </li> */}
+            </li>
             <li className="group">
               <a
                 href="/resource/allocation"

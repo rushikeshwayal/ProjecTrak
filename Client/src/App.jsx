@@ -22,6 +22,7 @@ import MinistryPolicies from './components/Admin/Home/MinistryPolicies';
 import AdminProfile from './components/Admin/Home/SubPart/AdminProfile';
 import AdminNotification from './components/Admin/Home/SubPart/AdminNotification';
 import Chatbot from './components/Common/Chatbot'; // Ensure this is correctly imported
+import AdminCreateProject from './components/Admin/Home/AdminCreateProject';
 function App() {
   // Access UserContext safely
   const userContext = useContext(UserContext);
@@ -46,6 +47,7 @@ function App() {
                <Route path="/ministry/policy" element={<MinistryPolicies />} />
                <Route path="/admin/profile" element={<AdminProfile />} />
                <Route path="/admin/notification" element={<AdminNotification />} />
+               <Route path="/create/project" element={<AdminCreateProject />} />
 
             </>
           )}
